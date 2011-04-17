@@ -1,4 +1,40 @@
 \chapter{Design} % (fold)
 \label{cha:design}
--image with (multiple) phones connecting to a server
+Now that the problems are clear, it is time to present the system that should solve these problems: the SnoozZz system. This chapter describes the design of the system. This chapter is divided in to three parts: the requirements for the system are listed in the first part; the components, that make up the system, and their responsibilities are listed second; lastly, an overview of the components and how these work together is provided.
+
+\section{Requirements} % (fold)
+\label{sec:requirements}
+
+% section requirements (end)
+
+\section{Components} % (fold)
+\label{sec:components}
+
+\subsection{Sensor} % (fold)
+\label{sub:sensor}
+- assuming some processing capabilities
+- detection of state is done elsewhere for now, subject to change
+% subsection sensor (end)
+
+\subsection{Data Processing} % (fold)
+\label{sub:data_processing}
+- assuming this is best done on a separate device (server)
+- not sure about the amount of processing required
+- want to be flexible, divided between sensor device and other device, could eliminate other device if needed
+% subsection data_processing (end)
+
+\subsection{Communication} % (fold)
+\label{sub:communication}
+- getting information from sensor to data-processing (data processing may be possible on the `sensor')
+- communicating the sleep state to other devices
+% subsection communication (end)
+
+% section components (end)
+
+\section{Overview} % (fold)
+\label{sec:overview}
+- Diagram with components and lines of communication
+- Describe what is should be done and in what order
+% section overview (end)
+
 % chapter design (end)
