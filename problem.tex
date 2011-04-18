@@ -4,30 +4,22 @@ In order to take sleep into account in an ubiquitous computing system, it is nec
 
 \section{Collecting Data} % (fold)
 \label{sec:collecting_data}
-For the collection of data from a person sleeping, multiple techniques can be used. However, it is often deemed unwanted to be 
+For the collection of data from a person sleeping, multiple techniques can be used. However, it is often deemed unwanted to be disturbed while sleeping. Therefore the collection of data should be done in a for the user ubiquitous way, so the technique is not seen as a burden.
+
 - ubiquitous
 - non intrusive (privacy)
-- a technique which the users do not see as a burden
 % section collecting_data (end)
 
 \section{Measuring Movement} % (fold)
 \label{sec:measuring_movement}
 There exist different methods for measuring which sleep state a person a person is in, for example, with an \emph{EEG} ~\cite{Itil196976}. In this project this detection is done by measuring the amount of movement a person has overnight. In order to measure the movement a sensor is needed. As described this sensor should be non intrusive and be able to capture the movement from a person. In this case the measurements are done using an accelerometer.
 
-- a means to measure the movement
-- accelerometer can be used
-- in this case in a mobile phone
 
 % section measuring_movement (end)
 
 \section{From Movement to Sleep State} % (fold)
 \label{sec:translate_movement_patterns_to_sleep_states}
-Capturing movement is not the only problem; when it is possible to capture movement while a user sleeps, this movement is not yet a sleep state. The measurements have to be classified in some way, to determine in which sleep state the user is in. As described by Hoque et \emph{al}. ~\cite{Hoque:2010:MBP:1921081.1921088} it is possible to distinguish the different sleep states based on the movement a person makes while sleeping.
-
-
-- we only have movement
-- movement has to be converted into sleep state
-- movement during states differ
+Capturing movement is not the only problem; when it is possible to capture movement while a user sleeps, this movement is not yet a sleep state. The measurements have to be classified in some way, to determine in which sleep state the user is in. As described by Hoque et \emph{al}. ~\cite{Hoque:2010:MBP:1921081.1921088} it is possible to distinguish the different sleep states based on the movement a person makes while sleeping. This project provides a way to do this.
 
 % section translate_movement_patterns_to_sleep_states (end)
 
