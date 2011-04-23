@@ -1,8 +1,14 @@
 \chapter{Evaluation} % (fold)
 \label{cha:evaluation}
-- Able to make distinction between REM and non REM
-- Problems determining movement patterns during non REM states
-- Hypnic jerk detection could help in determining if a person gets enough sleep
-- Should move more functionality to the Sensor application
-- If sensor application can make distinction, maybe use some kind of service discovery library to communicate capabilities and state information
+The SnoozZz application is evaluated by looking at what it does and does not do. Also, the problems that were experienced during the development of some of the functionality are described here. At the end of the evaluation some recommended additions and changes are described.
+
+The application is able to measure communicate movement. Using these measurements the application is able to make a reasonable distinction between REM and NREM. This distinction can be used, for example, to measure the amount of REM sleep a person experiences.
+
+Regrettably, the application is not yet able to make a distinction between the various NREM states. This information could have been very useful in determining the sleep quality and opportune moments to wake someone up. This is something that should be present the application.
+
+Because of the reasons just mentioned, distinction between NREM states is a feature that really should be added. Another way to determine sleep if someone sleeps well is the ability to detect hypnic jerks. These hypnic jerks occur more frequently when a person does not get enough sleep.
+
+There is also a change in the design of the application that should be made. Currently, the sensor application only communicates all accelerometer measurements to another component. Considering that the sensor application could do a lot more work, the detection of state can also be done here. This change would greatly reduce the amount of communication that is needed.
+
+If the sensor application is able to make a distinction between sleep states, it could be used without another component that receives all its information. It could be useful to use a service discovery library to communicate the capabilities of the sensor application. Any other component that can make use of sleep state information could then just register itself with the sensor application.
 % chapter evaluation (end)
