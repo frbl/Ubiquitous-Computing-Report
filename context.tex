@@ -1,6 +1,6 @@
 \chapter{Context} % (fold)
 \label{cha:context}
-In order to see what ubiquitous computing can do for people while they sleep, there must at least be a basic understanding of what sleep is. Sleeping consists of several states ~\cite{Silber:2007fk}, these states are described in the first section. What a system can do for people also depends on the ability to detect what sleep state people are in. In the second section of this chapter, two ways of detecting sleep state are described.
+In order to see what ubiquitous computing can do for people while they sleep, there must at least be a basic understanding of what sleep is. Sleeping consists of several states ~\cite{Silber:2007fk}, these states are described in the first section. The second section provides a description about what can be done using sleep state detection, this will be done using some existing examples of applications.
  
 \section{Sleep States} % (fold)
 \label{sec:sleep_states}
@@ -12,7 +12,7 @@ Rapid eye movement sleep is characterized by, unsurprisingly, by rapid movements
 
 Dreaming usually occurs during this sleep state. This could explain why the eyes move rapidly, according to Leclair-Visonneau, et \emph{al}. ~\cite{LeclairVisonneau:2010:Brain:20478849} the eyes seem to move as if the dream is real. Dreaming can also explain why muscles are paralyzed during REM sleep, this would prevent people from accidentally hurting themselves by acting out their dreams.
 
-The function of REM sleep is up to debate, there are multiple studies that suggest different function; for example, some studies suggest that REM sleep improves memory ~\cite{Marshall:2006:Nature:17086200} or creativeness ~\cite{Wagner:2004:Nature:14737168}. People wake up easily during REM sleep; i.e., it is a light sleep state. However, because its function is not very clear, it may be preferable to not interrupt it intentionally.
+The function of REM sleep is up to debate, there are multiple studies that suggest different function; for example, some studies suggest that REM sleep improves memory ~\cite{Marshall:2006:Nature:17086200} or creativeness ~\cite{Wagner:2004:Nature:14737168}. People wake up easily during REM sleep; i.e., it is a light sleep state. Detection of the REM state is interesting for two reasons: the first reason is that this seems like an opportune moment to wake someone up; the second reason, assuming that it is important to have enough REM sleep, is to keep track of the amount of REM sleep someone gets over multiple nights.
 % subsection rem_sleep (end)
 
 \subsection{NREM Sleep} % (fold)
@@ -40,7 +40,7 @@ There is a transition between states during sleep, this transition follows a cer
 
 The sleep cycle starts in the N1 stage. The N2 stage occurs two times in the cycle; between N1 and N3, and between N3 and REM. After the REM state, a person returns to the N1 state. Not shown in Image \ref{fig:images_sleep_cycle} is that people may awaken for short periods during REM sleep.
 
-An example of the transitions of states during sleep is provided in Image \ref{fig:hypnogram}. This image shows two important things: firstly, here it is shown that there are brief periods of awakening during sleep; secondly, it shows that the duration of the REM state becomes longer over time. This image also shows a fourth state, the third state used to be divided into two states; this is no longer the case ~\cite{Silber:2007fk}.
+An example of the transitions of states during sleep is provided in Image \ref{fig:hypnogram}. This image shows two important things: firstly, it shows that there are brief periods of awakening during sleep; secondly, it shows that the duration of the REM state becomes longer over time. This image also shows a fourth state; the third state used to be divided into two states, this is no longer the case ~\cite{Silber:2007fk}.
 
 \begin{figure}[htbp]
   \centering
@@ -52,32 +52,26 @@ An example of the transitions of states during sleep is provided in Image \ref{f
 
 % section sleep (end)
 
-\section{State Detection} % (fold)
-\label{sec:state_detection}
-
-\subsection{Brain Activity} % (fold)
-\label{sub:brain_activity}
-
-% subsection brain_activity (end)
-
-\subsection{Movement} % (fold)
-\label{sub:movement}
-
-% subsection movement (end)
-
-% section state_detection_methods (end)
-
 \section{Applications} % (fold)
 \label{sec:applications}
+Now that there is a better understanding about what sleep is and what its characteristics are, a closer look at what sleep state information can be used for is in order. The first application may be the most obvious, sleep state information can be used to wake people up at the moment they awaken most easily. The second application looks more at how sleep state information can be used in a larger ubiquitous computing system.
 
 \subsection{Alarm Clock} % (fold)
 \label{sub:alarm_clock}
+Using information about sleep states to wake people up at the best moment is already being used. Applications that function as such a smart alarm clock already exist; for example, Sleep Cycle ~\cite{sleep-cycle} for the iPhone and Smart Alarm ~\cite{smart-alarm-clock} for Android phones.
 
+These alarm clock applications use accelerometers in the phone to determine in what state people are in. These alarm clocks then try to wake up the user before a set time, when the most opportune sleep state occurs. After the set time, the alarm goes of anyway; this is to prevent someone from waking up too late.
+
+There is no possibility to share information of the sleep state with other applications during sleep. Users are, however, able to view and share (via email of Facebook) graphs displaying the transitions between and duration of states (on the iPhone at least). Using this information in an overarching ubiquitous system would then not be very user friendly, since the user must share this information every day.
 % subsection alarm_clock (end)
 
 \subsection{Context Awareness} % (fold)
 \label{sub:context_awareness}
+Information about sleep states can also be useful in larger ubiquitous systems. Some research is already being done to this end, for example UbiSAS ~\cite{Yoon-Sik_Jae-Doo_2006}. An alarm clock, for example, could be a part of such a system. There are, however, more uses for sleep state information, some example will be described.
 
+The amount of sleep people have, and the duration of the sleep states, can influence how people feel. If information about these states can be shared between components of an ubiquitous system, this system could, possibly, take someones state into account; for example, advising someone that he or she should go to sleep.
+
+Information about going to sleep and waking up, not necessarily the sleep states, can also be of use. A ubiquitous system can, for example, adjust lighting according just prior to waking up or going to sleep. Ubiquitous systems can determine actions according to context, adding information about sleep and sleep states can, arguably, be valuable.
 % subsection context_awareness (end)
 
 % section applications (end)
