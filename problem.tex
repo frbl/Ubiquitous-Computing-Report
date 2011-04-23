@@ -1,27 +1,27 @@
 \chapter{Problem} % (fold)
 \label{cha:problem}
-In order to take sleep into account in an ubiquitous computing system, it is necessary to detect a persons' sleep state; this should happen in an unobtrusive manner. Sleep state detection by measuring movement using an accelerometer would enable this; but how can this be accomplished. This problem can be divided into four parts, which will be described in this chapter.
+In order to take sleep into account in an ubiquitous computing system, it is necessary to detect a persons' sleep state; this should happen in an unobtrusive manner. Sleep state detection by measuring movement using an accelerometer would enable this; but how can this be accomplished? This problem can be divided into four parts, which will be described in this chapter.
 
 \section{Collecting Data} % (fold)
 \label{sec:collecting_data}
-Multiple techniques exist for the collection of data from a sleeping person. For example, the person could be filmed. However, this technique can be very intrusive on the user's privacy. Also, it is often deemed unwanted to be disturbed while sleeping. Therefore the collection of data should be done in a for the user ubiquitous way, so the technique is not seen as a burden.
+Multiple techniques exist for the collection of data from a sleeping person. For example, the person could be filmed or an EEG ~\cite{Itil196976} can be used. However, these techniques can be considered intrusive on the user's privacy. Also, it is often deemed unwanted to be disturbed while sleeping. Therefore the collection of data should be done in such a way that the technique is not seen as a burden.
 % section collecting_data (end)
 
 \section{Measuring Movement} % (fold)
 \label{sec:measuring_movement}
-There exist different methods for measuring which sleep state a person a person is in, for example, with an \emph{EEG} ~\cite{Itil196976} or using an accelerometer. For this project using an EEG was not an option. In this project the sleep state detection is done by measuring the amount of movement a person has overnight. In order to measure this movement, a sensor is needed. As described in the first section, it is wanted that this sensor is non intrusive and is able to capture the movement of a person in a way in which is isn't a burden for the user. To measure this movement an accelerometer is used. A mobile phone was used to do these measurements, as a lot of the modern phones have the sensors to do this and have the ability to connect to another device.
+Different methods exist to determine which sleep state a person a person is in. In this project the sleep state detection is done by measuring the amount of movement a person has overnight. In order to measure this movement, a sensor is needed. As described in the first section, this sensor should be non intrusive and be able to capture the movement of a person in a way in which is isn't a burden for the user. 
 
+An accelerometer can be used to measure movement. A mobile phone can be used to do these measurements, as a lot of the modern phones have the sensors to do this and have the ability to connect to another device. The problem here is that an accelerometer measures the position of the device, this information needs to be interpreted in such a way that movement can is measured.
 % section measuring_movement (end)
 
 \section{From Movement to Sleep State} % (fold)
-\label{sec:translate_movement_patterns_to_sleep_states}
-Capturing movement is not the only problem; when it is possible to capture movement while a user sleeps, this movement is not yet a sleep state. The measurements have to be classified in some way, to determine in which sleep state the user is in. As described by Hoque et \emph{al}. ~\cite{Hoque:2010:MBP:1921081.1921088}, it is possible to distinguish the different sleep states based on the movement a person makes while sleeping. This project provides a way to do this.
-
-% section translate_movement_patterns_to_sleep_states (end)
+\label{sec:from_movement_to_sleep_states}
+Capturing movement is not the only problem; when it is possible to capture movement while a user sleeps, this movement is not yet a sleep state. The measurements have to be classified in some way, to determine in which sleep state the user is in. As described by Hoque et \emph{al}. ~\cite{Hoque:2010:MBP:1921081.1921088}, it is possible to distinguish the different sleep states based on the movement a person makes while sleeping. The SnoozZz application needs to provide a way to do this.
+% section from_movement_to_sleep_states (end)
 
 \section{Communication of Information} % (fold)
 \label{sec:communicating_relevant_information}
-For doing the translation from movements to sleep state, a classification has to be done on these measurements. To do this classification, some processing power is needed. As it is possible that the sensor does not have enough processing power to do this or if the calculations have to be used elsewhere, something more than just the sensor is needed. These measurements have to be communicated to an external device, capable of doing this.
+To translate from movement into to sleep state, a classification has to be done on these measurements. Processing power is needed to do this classification. As it is possible that the sensor does not have enough processing power to do this or that the raw data has to be used elsewhere, something more than just the sensor is needed. These measurements have to be communicated to an external device, capable of doing this. Even if all of the classification is done on the sensor device, it is still usefull if the sleep state can be communicated to other components in an ubiquitous system.
 % section communicating_relevant_information (end)
 
 % chapter problem (end)
